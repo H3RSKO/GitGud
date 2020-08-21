@@ -8,9 +8,10 @@ const statusOutput = () => {
           return;
         }
         return stdout.trim()
+
       })
       .toString()
-			return gitStatusOutput
+      return gitStatusOutput
 }
 
 module.exports = statusOutput;

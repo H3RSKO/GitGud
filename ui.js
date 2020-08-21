@@ -13,7 +13,7 @@ const App = () => {
 
 	useEffect(() => {
 		setStatus(statusOutput());
-		const { width, height } = measureElement(ref.current);
+		const { width, height } = measureElement(ref.current); //Use the measureElement with GitBranch later down the line to make our graph
 		setWidth(width);
 	}, []);
 
