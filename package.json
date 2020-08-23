@@ -16,6 +16,8 @@
 	"dependencies": {
 		"import-jsx": "^4.0.0",
 		"ink": "^3.0.4",
+		"ink-select-input": "^4.0.0",
+		"ink-tab": "^3.0.2",
 		"meow": "^7.1.0",
 		"react": "^16.13.1"
 	},
@@ -44,6 +46,7 @@
 			"@babel/preset-react"
 		]
 	},
+		"type": "module",
 	"xo": {
 		"extends": "xo-react",
 		"rules": {

@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 'use strict';
-const React = require('react');
-const importJsx = require('import-jsx');
-const {render} = require('ink');
-const meow = require('meow');
+import React from 'react';
+import importJsx from 'import-jsx';
+const {render} = 'ink';
+import meow from 'meow';
 
 const ui = importJsx('./ui');
 

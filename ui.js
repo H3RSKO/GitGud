@@ -1,24 +1,33 @@
 "use strict";
-const React = require("react");
+import React from "react";
 
-const { useEffect, useState, useRef } = require("react");
-const { Text, Box, measureElement, Newline } = require("ink");
-const statusOutput = require("./testChildProcess");
-const Renderer = require("./components/divider");
-
+import { useEffect, useState, useRef } from "react";
+import { Text, Box, measureElement, Newline } from "ink";
+import statusOutput from "./testChildProcess";
+import Renderer from "./components/divider";
+import Buttons from "./components/buttons"
+import { Tabs, Tab } from 'ink-tab'
+import Buttons = importJsx('./components/buttons');
 
 const enterAltScreenCommand = '\x1b[?1049h';
 const leaveAltScreenCommand = '\x1b[?1049l';
 
+
 const exitFullScreen = () => {
-  process.stdout.write(leaveAltScreenCommand);
+	process.stdout.write(leaveAltScreenCommand);
 };
 
-const App = () => {
+export default App = () => {
 	const [status, setStatus] = useState("");
 	const [appWidth, setWidth] = useState(null);
+	const [activeTabName, setActiveTabName] = useState(null);
 
 	const ref = useRef(null);
+
+	function handleTabChange(name, activeTab) {
+		// set the active tab name to do what you want with the content
+		setActiveTabName(name);
+	}
 
 	useEffect(() => {
 		setStatus(statusOutput());
@@ -56,6 +65,20 @@ const App = () => {
 				<Box className="stage-area" height="50%">
 					<Text>Staged-Area</Text>
 				</Box>
+				<Box className="button-box" borderStyle="round" borderColor="red">
+					{/* <Buttons/> */}
+					{/* {Buttons.items} */}
+					<Box>
+						{activeTab === 'foo' && 'Selected tab is "foo"'}
+						{activeTab === 'bar' && 'Selected tab is "bar"'}
+						{activeTab === 'baz' && 'Selected tab is "baz"'}
+					</Box>
+					<Tabs onChange={handleTabChange}>
+						<Tab name="foo">Foo</Tab>
+						<Tab name="bar">Bar</Tab>
+						<Tab name="baz">Baz</Tab>
+      </Tabs>
+				</Box>
 			</Box>
 			<Box
 				className="gitBranch"
@@ -71,4 +94,4 @@ const App = () => {
 	);
 };
 
-module.exports = App;
+// module.exports = App;
