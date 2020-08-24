@@ -15,7 +15,7 @@
 	],
 	"dependencies": {
 		"import-jsx": "^4.0.0",
-		"ink": "^3.0.4",
+		"ink": "^2.0.0-13",
 		"ink-tab": "^3.0.2",
 		"meow": "^7.1.0",
 		"react": "^16.13.1"
@@ -42,7 +42,12 @@
 	"babel": {
 		"presets": [
 			"@babel/preset-env",
-			"@babel/preset-react"
+			"@babel/preset-react",
+			{
+				"targets": {
+					"node": true
+				}
+			}
 		]
 	},
 	"xo": {

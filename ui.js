@@ -64,9 +64,9 @@ const App = () => {
 								{status.staged}
 							</Text>
 					</Box>
-					{/* {AppTabs} NO! */}
+					{/* {AppTabs} */}
 					<AppTabs/>
-					{console.log(AppTabs)}
+					{/* {console.log(AppTabs)} */}
 				</Box>
 			</Box>
 			<Box
