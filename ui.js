@@ -5,7 +5,9 @@ const { useEffect, useState, useRef } = require("react");
 const { Text, Box, measureElement, Newline } = require("ink");
 const statusOutput = require("./gitStatusOutput");
 const Renderer = require("./components/divider");
-
+const importJsx = require('import-jsx');
+const Buttons = importJsx('./components/buttons');
+const {render} = require('ink')
 
 const enterAltScreenCommand = '\x1b[?1049h';
 const leaveAltScreenCommand = '\x1b[?1049l';
@@ -62,6 +64,10 @@ const App = () => {
 								<Newline />
 								{status.staged}
 							</Text>
+					</Box>
+					<Box borderStyle="round" borderColor="red">
+						{/* <Buttons /> */}
+						{Buttons}
 					</Box>
 				</Box>
 			</Box>
