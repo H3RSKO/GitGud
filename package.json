@@ -14,6 +14,7 @@
 		"ui.js"
 	],
 	"dependencies": {
+		"@babel/polyfill": "^7.10.4",
 		"import-jsx": "^4.0.0",
 		"ink": "^3.0.4",
 		"meow": "^7.1.0",
@@ -21,6 +22,8 @@
 	},
 	"devDependencies": {
 		"@ava/babel": "^1.0.1",
+		"@babel/cli": "^7.10.5",
+		"@babel/core": "^7.11.4",
 		"@babel/preset-env": "^7.11.0",
 		"@babel/preset-react": "^7.10.4",
 		"@babel/register": "^7.10.5",
