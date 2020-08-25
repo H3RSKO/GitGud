@@ -6,6 +6,7 @@ const { Text, Box, measureElement, Newline } = require("ink");
 const statusOutput = require("./gitStatusOutput");
 const Renderer = require("./components/divider");
 const gitBranchCall = require('./currentBranch')
+const SelectInput = require('ink-select-input').default;
 
 
 const enterAltScreenCommand = '\x1b[?1049h';
@@ -19,6 +20,25 @@ const App = () => {
 	const [status, setStatus] = useState("");
 	const [branch, setBranch] = useState('')
 	const [appWidth, setWidth] = useState(null);
+
+	const handleSelect = item => {
+		// `item` = { label: 'First', value: 'first' }
+	};
+
+	const items = [
+		{
+			label: 'First',
+			value: 'first'
+		},
+		{
+			label: 'Second',
+			value: 'second'
+		},
+		{
+			label: 'Third',
+			value: 'third'
+		}
+	];
 
 	const ref = useRef(null);
 
@@ -39,6 +59,7 @@ const App = () => {
 	}, []);
 
 	return (
+		<Box flexDirection="column">
 		<Box
 		borderStyle="round"
 		borderColor="red"
@@ -93,6 +114,8 @@ const App = () => {
 			>
 				<Text>Git Branch --{'>'} {branch}</Text>
 			</Box>
+		</Box>
+			<SelectInput items={items} onSelect={handleSelect} />
 		</Box>
 	);
 };
