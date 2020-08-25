@@ -114,8 +114,10 @@ const App = () => {
 			>
 				<Text>Git Branch --{'>'} {branch}</Text>
 			</Box>
-		</Box>
-			<SelectInput items={items} onSelect={handleSelect} />
+		</Box >
+			<Box>
+				<SelectInput items={items} onSelect={handleSelect} />
+			</Box>
 		</Box>
 	);
 };
