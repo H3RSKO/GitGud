@@ -16,10 +16,16 @@
 		"ui.js",
 		"gitStatusOutput.js",
 		"currentBranch.js",
-		"branchVisual",
-		"branchVisualText",
-		"./components",
-		"./actions"
+		"branchVisual.js",
+		"branchVisualText.js",
+		"./components/divider.js",
+		"./components/FileStageMultiSelector.js",
+		"./actions/checkoutBranch.js",
+		"./actions/commit.js",
+		"./actions/pullBranch.js",
+		"./actions/pushTab.js",
+		"./actions/revertStaged.js",
+		"./actions/stageFiles.js"
 	],
 	"dependencies": {
 		"import-jsx": "^4.0.0",
