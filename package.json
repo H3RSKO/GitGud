@@ -1,8 +1,12 @@
 {
 	"name": "gg-beta",
+<<<<<<< HEAD
 	"description": "A CLI git tool",
 	"homepage": "https://gitgud.app",
 	"version": "1.0.3",
+=======
+	"version": "1.1.0",
+>>>>>>> 1ff22f1... 1.1.0
 	"license": "MIT",
 	"bin": "cli.js",
 	"repository": "H3RSKO/GG-beta",
