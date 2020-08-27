@@ -5,7 +5,8 @@
 	"homepage": "https://gitgud.app",
 	"license": "MIT",
 	"bin": "cli.js",
-	"repository": "GitGud-org/gitgud",
+	"repository": "H3RSKO/GG-beta",
+	"main": "build",
 	"engines": {
 		"node": ">=10"
 	},
