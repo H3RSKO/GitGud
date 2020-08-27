@@ -1,6 +1,6 @@
 const React = require("react");
 const { useEffect, useState, useRef } = require("react");
-const { render, Box } = require("ink");
+const { Box, useInput } = require("ink");
 const SelectInput = require("ink-select-input-horizontal").default;
 const { propTypes } = require("ink-gradient");
 const importJsx = require("import-jsx");
@@ -9,14 +9,19 @@ const pushTab = require("./actions/pushTab");
 const revertTab = require("./actions/revertStaged");
 const pullTab = require("./actions/pullBranch");
 const stageFiles = require('./actions/stageFiles')
+const DeleteTab = importJsx('./actions/deleteBranch')
 
 const CheckoutBranch = importJsx("./actions/checkoutBranch");
 const CommitAction = importJsx("./actions/commit");
 
 const Selector = () => {
-	// const [branchCheckout, setCheckoutBranch] = useState(false);
 	const [currentTab, setCurrentTab] = useState('');
 
+	useInput((input, key) => {
+		if (key.escape) {
+			return setCurrentTab('')
+		}
+	})
 
 	const handleSelect = (item) => {
 		setCurrentTab(item.value)
@@ -59,6 +64,10 @@ const Selector = () => {
 			label: "Checkout Branch",
 			value: "checkoutBranch",
 		},
+		{
+			label: "Delete Branch",
+			value: "deleteBranch",
+		}
 	];
 
 	switch (currentTab) {
@@ -66,13 +75,19 @@ const Selector = () => {
 			return (
 				<Box flexDirection="column">
 					<SelectInput items={items} onSelect={handleSelect} />
-					<CheckoutBranch refreshTab={setCurrentTab} item={items[3]} />
+					<CheckoutBranch refreshTab={setCurrentTab}/>
 				</Box>)
 		case 'commitChanges':
 			return (
 				<Box flexDirection="column">
 					<SelectInput items={items} onSelect={handleSelect} />
 					<CommitAction refreshTab={setCurrentTab}/>
+				</Box>)
+    case 'deleteBranch':
+			return (
+				<Box flexDirection='column'>
+					<SelectInput items={items} onSelect={handleSelect} />
+					<DeleteTab refreshTab={setCurrentTab}/>
 				</Box>)
 		default:
 			return <SelectInput items={items} onSelect={handleSelect} />
