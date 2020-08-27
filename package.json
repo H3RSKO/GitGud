@@ -4,7 +4,7 @@
 	"license": "MIT",
 	"bin": "cli.js",
 	"repository": "H3RSKO/GG-beta",
-	"main": "build",
+	"main": "cli.js",
 	"engines": {
 		"node": ">=10"
 	},
@@ -13,7 +13,13 @@
 	},
 	"files": [
 		"cli.js",
-		"ui.js"
+		"ui.js",
+		"gitStatusOutput.js",
+		"currentBranch.js",
+		"branchVisual",
+		"branchVisualText",
+		"./components",
+		"./actions"
 	],
 	"dependencies": {
 		"import-jsx": "^4.0.0",
