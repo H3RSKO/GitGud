@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 > bufferutil@4.0.1 install /Users/AaronLowenthal/js/bootcamp/senior-phase/GitGud/node_modules/bufferutil
 > node-gyp-build
 
@@ -10,6 +11,19 @@
 + bufferutil@4.0.1
 + @types/react@16.9.48
 added 3 packages from 2 contributors, updated 2 packages and audited 986 packages in 11.923s
+=======
+> bufferutil@4.0.1 install /Users/AaronLowenthal/js/bootcamp/senior-phase/gitgud-beta/gg-beta/node_modules/bufferutil
+> node-gyp-build
+
+
+> utf-8-validate@5.0.2 install /Users/AaronLowenthal/js/bootcamp/senior-phase/gitgud-beta/gg-beta/node_modules/utf-8-validate
+> node-gyp-build
+
++ @types/react@16.9.48
++ bufferutil@4.0.1
++ utf-8-validate@5.0.2
+added 3 packages from 2 contributors, updated 1 package and audited 990 packages in 10.553s
+>>>>>>> 0488f28... added missing dependancies
 
 84 packages are looking for funding
   run `npm fund` for details
