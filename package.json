@@ -6,7 +6,7 @@
 	"license": "MIT",
 	"bin": "cli.js",
 	"repository": "H3RSKO/GG-beta",
-	"main": "build",
+	"main": "cli.js",
 	"engines": {
 		"node": ">=10"
 	},
