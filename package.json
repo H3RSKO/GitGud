@@ -1,6 +1,6 @@
 {
 	"name": "gg-beta",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"license": "MIT",
 	"bin": "cli.js",
 	"repository": "H3RSKO/GG-beta",
