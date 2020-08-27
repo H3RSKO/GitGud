@@ -12,6 +12,8 @@
 		"test": "echo \"No test specified\""
 	},
 	"dependencies": {
+		"@types/react": "^16.9.48",
+		"bufferutil": "^4.0.1",
 		"import-jsx": "^4.0.0",
 		"ink": "^3.0.4",
 		"ink-big-text": "^1.2.0",
@@ -19,7 +21,8 @@
 		"ink-select-input-horizontal": "^4.1.0",
 		"ink-text-input": "^4.0.0",
 		"meow": "^7.1.0",
-		"react": "^16.13.1"
+		"react": "^16.13.1",
+		"utf-8-validate": "^5.0.2"
 	},
 	"devDependencies": {
 		"@ava/babel": "^1.0.1",
