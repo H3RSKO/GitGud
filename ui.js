@@ -3,7 +3,6 @@ const React = require("react");
 
 const { useEffect, useState, useRef } = require("react");
 const { Text, Box, measureElement, Newline, Spacer } = require("ink");
-const statusOutput = require("./gitStatusOutput");
 const Renderer = require("./components/divider");
 const gitBranchCall = require("./currentBranch");
 const Gradient = require("ink-gradient");
