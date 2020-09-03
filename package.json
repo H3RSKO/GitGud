@@ -1,7 +1,6 @@
 {
 	"name": "gg-beta",
-	"description": "A CLI git tool",
-	"homepage": "https://gitgud.app",
+	"description": "GitGud Beta. This package is deprecated and no longer supported. Please use the main gitgud package instead.",
 	"version": "1.4.0",
 	"license": "MIT",
 	"bin": "cli.js",
